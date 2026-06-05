@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Strategico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cs2">
+
+<!-- ══════════════════════════════════
+     CUSTOM STICKY NAVIGATION
+══════════════════════════════════ -->
+<div class="fw cs-nav" id="cs-main-nav">
+  <div class="inn">
+    <div class="cs-nav-inner">
+      <a href="https://www.curriculumstrategico.it/" class="cs-logo">
+        <!-- Logo SVG: mortarboard + open book/figure — fedele all'originale -->
+        <svg viewBox="0 0 80 102" width="36" height="46" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;display:block" aria-hidden="true">
+          <defs>
+            <linearGradient id="csg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#5ba3ff"/>
+              <stop offset="100%" stop-color="#1a73e8"/>
+            </linearGradient>
+          </defs>
+          <!-- Mortarboard diamond -->
+          <polygon points="40,4 63,18 40,32 17,18" stroke="url(#csg)" stroke-width="4.5" stroke-linejoin="round"/>
+          <!-- Brim left -->
+          <line x1="17" y1="18" x2="4" y2="18" stroke="url(#csg)" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- Brim right -->
+          <line x1="63" y1="18" x2="76" y2="18" stroke="url(#csg)" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- Tassel -->
+          <line x1="63" y1="18" x2="67" y2="36" stroke="url(#csg)" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- Neck arch -->
+          <path d="M30 32 Q30 50 40 54 Q50 50 50 32" stroke="url(#csg)" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+          <!-- Left wing / open book -->
+          <path d="M6 64 L40 76 L40 98 L6 86 Z" stroke="url(#csg)" stroke-width="4.5" stroke-linejoin="round"/>
+          <!-- Right wing -->
+          <path d="M74 64 L40 76 L40 98 L74 86 Z" stroke="url(#csg)" stroke-width="4.5" stroke-linejoin="round"/>
+          <!-- Collar V / book spine -->
+          <path d="M24 64 L40 72 L56 64" stroke="url(#csg)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="cs-logo-text">Curriculum Strategico</span>
+      </a>
+      <nav class="cs-nav-links">
+        <a href="https://www.curriculumstrategico.it/" class="cs-nav-link">Home</a>
+        <a href="https://www.curriculumstrategico.it/articoli-curriculum-senza-esperienza/" class="cs-nav-link">Articoli</a>
+        <a href="https://www.curriculumstrategico.it/curriculum-senza-esperienza/risorse/" class="cs-nav-link">Risorse</a>
+        <a href="chisiamo.html" class="cs-nav-link">Chi Siamo</a>
+        <a href="https://www.curriculumstrategico.it/contattaci/" class="cs-nav-link">Contattaci</a>
+        <a href="https://www.curriculumstrategico.it/newsletter/" class="cs-nav-cta">✉ Newsletter</a>
+      </nav>
+      <button class="cs-burger" id="cs-burger" aria-label="Apri menu" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="cs-mobile-menu" id="cs-mobile-menu">
+    <a href="https://www.curriculumstrategico.it/" class="cs-mobile-link">🏠 Home</a>
+    <a href="https://www.curriculumstrategico.it/articoli-curriculum-senza-esperienza/" class="cs-mobile-link">📚 Articoli</a>
+    <a href="https://www.curriculumstrategico.it/curriculum-senza-esperienza/risorse/" class="cs-mobile-link">🧭 Risorse</a>
+    <a href="chisiamo.html" class="cs-mobile-link">👤 Chi Siamo</a>
+    <a href="https://www.curriculumstrategico.it/contattaci/" class="cs-mobile-link">✉ Contattaci</a>
+    <a href="https://www.curriculumstrategico.it/newsletter/" class="cs-mobile-cta">✉ Iscriviti alla Newsletter</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     HERO — gradiente animato
+══════════════════════════════════ -->
+<div class="fw hero">
+  <div class="hero-deco a"></div>
+  <div class="hero-deco b"></div>
+  <div class="hero-deco c"></div>
+  <div class="hero-deco d">CV</div>
+  <div class="inn">
+    <div class="hero-badge">✦ Guide gratuite · Aggiornate al 2026</div>
+    <h1>Costruisci un CV <em>competitivo</em><br>prima ancora di laurearti</h1>
+    <p class="hero-sub">Guide operative su certificazioni, experiences internazionali, volontariato e simulazioni aziendali. Dati reali, metodi concreti — anche partendo da zero.</p>
+    <div class="hero-ctas">
+      <a href="https://www.curriculumstrategico.it/curriculum-senza-esperienza/risorse/" class="btn-gold">✦ Esplora le Risorse</a>
+      <a href="https://www.curriculumstrategico.it/articoli-curriculum-senza-esperienza/" class="btn-ghost">Leggi le Guide →</a>
+    </div>
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-num" data-target="100" data-suffix="%">0%</span>
+        <span class="stat-lbl">Contenuti gratuiti</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="0" data-suffix="€">0€</span>
+        <span class="stat-lbl">Per iniziare</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="2026" data-suffix="">0</span>
+        <span class="stat-lbl">Sempre aggiornato</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" style="font-size:24px">≤ 10 min</span>
+        <span class="stat-lbl">Lettura per guida</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     TRUST BAR
+══════════════════════════════════ -->
+<div class="fw trust-bar">
+  <div class="inn">
+    <div class="trust-inner">
+      <span class="trust-label">Guide basate su dati da</span>
+      <div class="trust-chips">
+        <span class="trust-chip">Google Career Certificates</span>
+        <span class="trust-chip">LinkedIn Talent Insights</span>
+        <span class="trust-chip">Erasmus Impact Study</span>
+        <span class="trust-chip">Deloitte Global Survey</span>
+        <span class="trust-chip">The Ladders · 2018</span>
+        <span class="trust-chip">Testlify · 2026</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     IG-STYLE STAT CARDS
+══════════════════════════════════ -->
+<div class="inn ig-section">
+  <span class="sec-label">I dati che devi conoscere</span>
+  <h2 class="sec-title">Perché costruire il CV ora cambia tutto</h2>
+  <p class="sec-sub">Dati reali dal mercato del lavoro che spiegano perché ogni semestre conta.</p>
+  <div class="ig-grid">
+
+    <div class="ig-card">
+      <div class="ig-card-icon">⏱</div>
+      <div class="ig-card-num">7,4"</div>
+      <div class="ig-card-text">Secondi medi che un recruiter dedica alla prima lettura di un CV. Il profilo deve comunicare valore prima ancora che inizi a leggere.</div>
+      <div class="ig-card-src">The Ladders — Eye-Tracking Study, 2018</div>
+    </div>
+
+    <div class="ig-card">
+      <div class="ig-card-icon">📉</div>
+      <div class="ig-card-num">-23%</div>
+      <div class="ig-card-text">Probabilità in meno di restare disoccupati per chi partecipa a programmi di mobilità internazionale rispetto ai coetanei senza.</div>
+      <div class="ig-card-src">Erasmus Impact Study — European Commission, 2019</div>
+    </div>
+
+    <div class="ig-card">
+      <div class="ig-card-icon">🏅</div>
+      <div class="ig-card-num">70%+</div>
+      <div class="ig-card-text">Dei completatari dei Google Career Certificates ottiene un esito professionale positivo entro sei mesi dalla certificazione.</div>
+      <div class="ig-card-src">Google Career Certificates Impact Report, 2025</div>
+    </div>
+
+    <div class="ig-card">
+      <div class="ig-card-icon">🎯</div>
+      <div class="ig-card-num">81%</div>
+      <div class="ig-card-text">Dei datori di lavoro valuta le competenze dimostrabili prima del titolo di studio. Le esperienze concrete non sono optional.</div>
+      <div class="ig-card-src">Testlify — Skills-Based Hiring Report, 2026</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     VIDEO STORIES — Immagina la tua prossima esperienza
+     Video royalty-free Pexels (autoplay, muted, loop)
+     Cambia automaticamente ogni 7s · frecce · touch-friendly
+══════════════════════════════════ -->
+<div class="fw vs-section">
+  <div class="vs-wrap" id="vs-wrap">
+
+    <!-- Due video per crossfade fluido -->
+    <video class="vs-video active" id="vs-vid-a" autoplay muted playsinline loop crossorigin="anonymous"
+           poster="https://images.pexels.com/videos/7683391/pexels-photo-7683391.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200"></video>
+    <video class="vs-video"        id="vs-vid-b"         muted playsinline loop crossorigin="anonymous"
+           poster="https://images.pexels.com/videos/7683391/pexels-photo-7683391.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200"></video>
+
+    <div class="vs-overlay"></div>
+    <div class="vs-label">Scopri le esperienze</div>
+
+    <!-- Frecce navigazione -->
+    <div class="vs-arrow prev" onclick="vsPrev()" aria-label="Precedente">&#8592;</div>
+    <div class="vs-arrow next" onclick="vsNext()" aria-label="Successivo">&#8594;</div>
+
+    <!-- Testo overlay -->
+    <div class="vs-content" id="vs-content">
+      <div class="vs-badge" id="vs-badge"></div>
+      <h2 class="vs-title" id="vs-title"></h2>
+      <p class="vs-desc" id="vs-desc"></p>
+      <a class="vs-btn" id="vs-btn" href="#">→</a>
+    </div>
+
+    <!-- Dot nav -->
+    <div class="vs-nav" id="vs-nav"></div>
+
+    <!-- Barra progresso -->
+    <div class="vs-pline"><div class="vs-pbar" id="vs-pbar"></div></div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     METHOD STEPPER — Il Metodo in 4 Passi
+     (sostituisce la necessità di un video:
+      zero carico esterno, massima interattività)
+══════════════════════════════════ -->
+<div class="fw method-section">
+  <div class="inn">
+    <span class="sec-label">Il metodo</span>
+    <h2 class="sec-title">Come costruire un CV vincente — passo dopo passo</h2>
+    <p class="sec-sub">Il percorso in 4 fasi seguito dai candidati che ottengono i migliori risultati, anche senza esperienza lavorativa pregressa.</p>
+
+    <div class="method-wrap">
+      <!-- Indicatori di passo -->
+      <div class="step-indicators">
+        <div class="step-dot active" onclick="goStep(0)" id="dot-0" title="Passo 1">1</div>
+        <div class="step-line" id="line-0"></div>
+        <div class="step-dot" onclick="goStep(1)" id="dot-1" title="Passo 2">2</div>
+        <div class="step-line" id="line-1"></div>
+        <div class="step-dot" onclick="goStep(2)" id="dot-2" title="Passo 3">3</div>
+        <div class="step-line" id="line-2"></div>
+        <div class="step-dot" onclick="goStep(3)" id="dot-3" title="Passo 4">4</div>
+      </div>
+
+      <!-- Passo 1 -->
+      <div class="step-content active" id="step-0">
+        <span class="step-icon-big">🗺️</span>
+        <span class="step-num-label">Passo 1 di 4</span>
+        <h3 class="step-title">Analizza le opportunità disponibili</h3>
+        <p class="step-desc">Prima di aggiungere qualsiasi esperienza al CV, è fondamentale capire quali opportunità esistono, quanto pesano sul profilo e quale si adatta al tuo settore e al tuo tempo. Certificazioni gratuite, simulazioni aziendali, volontariato strutturato, programmi internazionali: ogni categoria ha un impatto diverso e richiede un investimento di tempo differente. La mappa completa è nella Pillar Page.</p>
+        <div class="step-nav">
+          <a href="https://www.curriculumstrategico.it/curriculum-senza-esperienza/risorse/" class="step-link">📚 Vedi la mappa completa →</a>
+          <button class="step-btn primary" onclick="nextStep()">Passo 2: Scegli l'esperienza →</button>
+        </div>
+        <div class="step-progress"><div class="step-progress-bar" id="spb-0"></div></div>
+      </div>
+
+      <!-- Passo 2 -->
+      <div class="step-content" id="step-1">
+        <span class="step-icon-big">🎯</span>
+        <span class="step-num-label">Passo 2 di 4</span>
+        <h3 class="step-title">Scegli l'esperienza giusta per il tuo profilo</h3>
+        <p class="step-desc">Non esiste un'esperienza universalmente "migliore" per il CV. La scelta dipende dal settore target, dal tempo disponibile e dal punto di partenza. Chi punta alla finanza trae vantaggio dalle simulazioni Forage; chi aspira al terzo settore farà meglio con il Servizio Civile; chi vuole un profilo internazionale dovrebbe esplorare Erasmus o il Corpo Europeo di Solidarietà. L'importante è che l'esperienza sia verificabile e pertinente al ruolo target.</p>
+        <div class="step-nav">
+          <button class="step-btn" onclick="prevStep()">← Indietro</button>
+          <button class="step-btn primary" onclick="nextStep()">Passo 3: Ottimizza il CV →</button>
+        </div>
+        <div class="step-progress"><div class="step-progress-bar" id="spb-1"></div></div>
+      </div>
+
+      <!-- Passo 3 -->
+      <div class="step-content" id="step-2">
+        <span class="step-icon-big">✍️</span>
+        <span class="step-num-label">Passo 3 di 4</span>
+        <h3 class="step-title">Ottimizza come presenti ogni esperienza</h3>
+        <p class="step-desc">Un'esperienza di valore presentata in modo generico vale quanto niente. Il formato corretto segue la struttura "verbo d'azione + risultato quantificabile + contesto": non "Volontario CRI", ma "Ho coordinato l'allestimento di 3 punti di raccolta per 500+ beneficiari nell'ambito del programma CRI". Ogni guida include esempi CV prima/dopo costruiti su dati reali, adattabili direttamente al tuo profilo.</p>
+        <div class="step-nav">
+          <button class="step-btn" onclick="prevStep()">← Indietro</button>
+          <button class="step-btn primary" onclick="nextStep()">Passo 4: Candidati →</button>
+        </div>
+        <div class="step-progress"><div class="step-progress-bar" id="spb-2"></div></div>
+      </div>
+
+      <!-- Passo 4 -->
+      <div class="step-content" id="step-3">
+        <span class="step-icon-big">🚀</span>
+        <span class="step-num-label">Passo 4 di 4</span>
+        <h3 class="step-title">Candidati con un profilo che compete</h3>
+        <p class="step-desc">Con le esperienze giuste e la presentazione corretta, il CV smette di essere un problema e diventa uno strumento. I recruiter dedicano in media 7,4 secondi alla prima lettura: un profilo costruito con metodo comunica valore immediatamente, anche senza anni di lavoro alle spalle. Le guide di Curriculum Strategico ti mostrano esattamente come arrivare a quel punto — gratis, con dati verificabili e metodo concreto.</p>
+        <div class="step-nav">
+          <button class="step-btn" onclick="prevStep()">← Indietro</button>
+          <a href="https://www.curriculumstrategico.it/articoli-curriculum-senza-esperienza/" class="step-btn primary">Inizia con le guide →</a>
+        </div>
+        <div class="step-progress"><div class="step-progress-bar" id="spb-3"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     PATH NAVIGATOR
+══════════════════════════════════ -->
+<div class="fw paths-section">
+  <div class="inn">
+    <span class="sec-label">Da dove vuoi iniziare?</span>
+    <h2 class="sec-title">Scegli il tuo percorso</h2>
+    <p class="sec-sub">Tre macro-aree per costruire un CV solido. Scegli quella più vicina al tuo obiettivo — o parti dalla Pillar Page per la visione d'insieme.</p>
+    <div class="paths-grid">
+
+      <a href="https://www.curriculumstrategico.it/corsi-gratuiti-certificati/" class="path-card">
+        <div class="path-icon" style="background:#ede9fe">🏅</div>
+        <h3>Certificazioni & Competenze</h3>
+        <p>Google, HubSpot, Microsoft, IBM. Credenziali verificabili riconosciute da 150+ employer — molte completamente gratuite con Financial Aid.</p>
+        <span class="path-arrow">Scopri le certificazioni →</span>
+      </a>
+
+      <a href="https://www.curriculumstrategico.it/erasmus-opportunita-curriculum/" class="path-card">
+        <div class="path-icon" style="background:#e0f2fe">🌍</div>
+        <h3>Esperienze Internazionali</h3>
+        <p>Erasmus+, Corpo Europeo di Solidarietà, volontariato ONU. Esperienze che cambiano il peso del CV — la maggior parte con finanziamento UE.</p>
+        <span class="path-arrow">Esplora le opportunità →</span>
+      </a>
+
+      <a href="https://www.curriculumstrategico.it/curriculum-senza-esperienza/risorse/" class="path-card featured">
+        <div class="path-icon" style="background:#fef3c7">🧭</div>
+        <h3>Tutte le Risorse</h3>
+        <p>La mappa completa: simulazioni aziendali, hackathon, volontariato strutturato, esperienze estive. Confronto impatto, costo e tempo per ogni tipologia.</p>
+        <span class="path-arrow">Vai alla guida completa →</span>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     INTERACTIVE QUIZ
+══════════════════════════════════ -->
+<div class="fw quiz-section">
+  <div class="inn">
+    <div class="quiz-box">
+      <div class="quiz-q">Qual è il tuo obiettivo principale in questo momento?</div>
+      <div class="quiz-hint">Seleziona un'opzione — ti mostro la guida più adatta al tuo profilo.</div>
+      <div class="quiz-opts">
+        <div class="quiz-opt" onclick="quizSelect(this,'cert')">🏅 Aggiungere<br>certificazioni</div>
+        <div class="quiz-opt" onclick="quizSelect(this,'int')">🌍 Fare un'esperienza<br>internazionale</div>
+        <div class="quiz-opt" onclick="quizSelect(this,'prat')">💼 Ottenere esperienza<br>pratica verificabile</div>
+        <div class="quiz-opt" onclick="quizSelect(this,'vol')">🤝 Fare volontariato<br>strategico</div>
+      </div>
+      <div class="quiz-result" id="qr">
+        <div class="quiz-result-label">La guida per te</div>
+        <h4 id="qr-title"></h4>
+        <p id="qr-desc"></p>
+        <a class="quiz-cta-link" id="qr-link" href="#">Leggi la guida completa →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     ARTICLE GRID — scalabile
+     (aggiungi nuove card senza limiti)
+══════════════════════════════════ -->
+<div class="inn articles-section">
+  <span class="sec-label">Guide pratiche</span>
+  <h2 class="sec-title">Le guide del blog</h2>
+  <p class="sec-sub">Ogni articolo è costruito su dati verificabili, esempi CV prima/dopo e metodo operativo. Niente teoria fine a sé stessa.</p>
+
+  <div class="art-grid">
+
+    <a href="https://www.curriculumstrategico.it/hackathon-cv/" class="art-card">
+      <div class="art-card-img-wrap">
+        <img src="https://www.curriculumstrategico.it/wp-content/uploads/2026/04/ChatGPT-Image-30-apr-2026-20_06_05-2-960x640.jpg" alt="Hackathon nel CV" loading="lazy">
+        <div class="art-card-overlay"></div>
+        <span class="art-card-badge badge-comp">Competenze Pratiche</span>
+        <span class="art-card-mins">8 min</span>
+      </div>
+      <div class="art-card-body">
+        <h3>Hackathon nel CV: cos'è e come inserirlo per distinguerti</h3>
+        <p>Come trasformare 48 ore in una voce CV che vale quanto uno stage. Metodo, esempio prima/dopo e dove trovare le migliori opportunità 2026.</p>
+        <div class="art-card-footer"><span class="art-cta">Leggi la guida →</span></div>
+      </div>
+    </a>
+
+    <a href="https://www.curriculumstrategico.it/erasmus-opportunita-curriculum/" class="art-card">
+      <div class="art-card-img-wrap">
+        <img src="https://www.curriculumstrategico.it/wp-content/uploads/2026/04/ChatGPT-Image-19-apr-2026-21_06_30-2-960x640.jpg" alt="Erasmus curriculum" loading="lazy">
+        <div class="art-card-overlay"></div>
+        <span class="art-card-badge badge-int">Internazionale</span>
+        <span class="art-card-mins">9 min</span>
+      </div>
+      <div class="art-card-body">
+        <h3>Erasmus: le opportunità (anche brevi) per arricchire il curriculum</h3>
+        <p>Non solo semestri all'estero. Traineeship, scambi brevi e programmi finanziati dall'UE con guida prima/dopo scaricabile inclusa.</p>
+        <div class="art-card-footer"><span class="art-cta">Leggi la guida →</span></div>
+      </div>
+    </a>
+
+    <a href="https://www.curriculumstrategico.it/esperienza-internazionale-da-casa-cv/" class="art-card">
+      <div class="art-card-img-wrap">
+        <img src="https://www.curriculumstrategico.it/wp-content/uploads/2026/04/ChatGPT-Image-18-apr-2026-13_48_24-960x640.jpg" alt="Volontariato ONU" loading="lazy">
+        <div class="art-card-overlay"></div>
+        <span class="art-card-badge badge-int">Internazionale</span>
+        <span class="art-card-mins">8 min</span>
+      </div>
+      <div class="art-card-body">
+        <h3>Volontariato ONU online per il CV: come funziona davvero</h3>
+        <p>Il programma UNV Online Volunteering: credenziali internazionali verificabili con agenzie ONU, direttamente da casa.</p>
+        <div class="art-card-footer"><span class="art-cta">Leggi la guida →</span></div>
+      </div>
+    </a>
+
+    <a href="https://www.curriculumstrategico.it/corsi-forage-esperienza-cv/" class="art-card">
+      <div class="art-card-img-wrap">
+        <img src="https://www.curriculumstrategico.it/wp-content/uploads/2026/04/ChatGPT-Image-17-apr-2026-20_01_35-2-960x640.jpg" alt="Corsi Forage" loading="lazy">
+        <div class="art-card-overlay"></div>
+        <span class="art-card-badge badge-comp">Competenze Pratiche</span>
+        <span class="art-card-mins">7 min</span>
+      </div>
+      <div class="art-card-body">
+        <h3>Corsi Forage: come ottenere esperienza gratis per il CV</h3>
+        <p>Simulazioni di lavoro reale da JPMorgan, BCG, Deloitte, Google. Gratuite, verificabili e progettate dalle aziende per intercettare talenti junior.</p>
+        <div class="art-card-footer"><span class="art-cta">Leggi la guida →</span></div>
+      </div>
+    </a>
+
+    <a href="https://www.curriculumstrategico.it/esperienze-formative-estive-studenti/" class="art-card">
+      <div class="art-card-img-wrap">
+        <img src="https://www.curriculumstrategico.it/wp-content/uploads/2026/04/IMG_4937-2-2-960x640.webp" alt="Esperienze estive" loading="lazy">
+        <div class="art-card-overlay"></div>
+        <span class="art-card-badge badge-opp">Opportunità</span>
+        <span class="art-card-mins">9 min</span>
+      </div>
+      <div class="art-card-body">
+        <h3>Esperienze formative estive: i migliori siti per studenti (2026)</h3>
+        <p>Summer school, stage estivi, volontariato internazionale e corsi certificati. Come trasformare 3 mesi estivi in un asset professionale.</p>
+        <div class="art-card-footer"><span class="art-cta">Leggi la guida →</span></div>
+      </div>
+    </a>
+
+    <a href="https://www.curriculumstrategico.it/volontariato-per-il-curriculum2026/" class="art-card">
+      <div class="art-card-img-wrap">
+        <img src="https://www.curriculumstrategico.it/wp-content/uploads/2026/04/IMG_4939-2-960x640.webp" alt="Volontariato curriculum" loading="lazy">
+        <div class="art-card-overlay"></div>
+        <span class="art-card-badge badge-vol">Volontariato</span>
+        <span class="art-card-mins">8 min</span>
+      </div>
+      <div class="art-card-body">
+        <h3>Volontariato per il curriculum: il tuo vantaggio competitivo</h3>
+        <p>Servizio Civile, ESC, CRI, Legambiente. Quali esperienze valgono di più e come descriverle con metodo nel CV.</p>
+        <div class="art-card-footer"><span class="art-cta">Leggi la guida →</span></div>
+      </div>
+    </a>
+
+    <a href="https://www.curriculumstrategico.it/corsi-gratuiti-certificati/" class="art-card">
+      <div class="art-card-img-wrap">
+        <img src="https://www.curriculumstrategico.it/wp-content/uploads/2026/04/Studente-concentrato-con-laptop-e-tazza-1-960x640.webp" alt="Corsi certificati" loading="lazy">
+        <div class="art-card-overlay"></div>
+        <span class="art-card-badge badge-cert">Certificazioni</span>
+        <span class="art-card-mins">10 min</span>
+      </div>
+      <div class="art-card-body">
+        <h3>Corsi gratuiti certificati: le migliori piattaforme online (2026)</h3>
+        <p>Google, HubSpot, Microsoft, IBM, Meta Blueprint. Come accedere gratis ai certificati più riconosciuti e come inserirli nel CV.</p>
+        <div class="art-card-footer"><span class="art-cta">Leggi la guida →</span></div>
+      </div>
+    </a>
+
+    <!-- NOTA: aggiungi nuove card qui seguendo la stessa struttura -->
+
+  </div>
+
+  <div style="text-align:center;margin-top:36px">
+    <a href="https://www.curriculumstrategico.it/articoli-curriculum-senza-esperienza/" class="art-more-link">Scopri tutte le guide →</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     AUDIENCE — Per chi è questo blog
+══════════════════════════════════ -->
+<div class="fw audience-section">
+  <div class="inn">
+    <span class="sec-label">Per chi è questo blog</span>
+    <h2 class="sec-title">Questo blog è fatto per te se…</h2>
+    <p class="sec-sub">Curriculum Strategico è per chi vuole costruire un profilo professionale competitivo prima di entrare nel mercato del lavoro.</p>
+    <div class="aud-grid">
+      <div class="aud-item">
+        <span class="aud-icon">🎓</span>
+        <div><strong>Sei uno studente universitario</strong><p>Vuoi iniziare a costruire il CV prima della laurea, senza aspettare la prima esperienza lavorativa.</p></div>
+      </div>
+      <div class="aud-item">
+        <span class="aud-icon">📄</span>
+        <div><strong>Ti sei appena laureato</strong><p>Non sai come valorizzare il tuo percorso in un CV che catturi l'attention dei recruiter nei primi 7 secondi.</p></div>
+      </div>
+      <div class="aud-item">
+        <span class="aud-icon">🌐</span>
+        <div><strong>Vuoi distinguerti dalla massa</strong><p>Con esperienze concrete e verificabili — certificazioni, hackathon, volontariato, programmi internazionali.</p></div>
+      </div>
+      <div class="aud-item">
+        <span class="aud-icon">💡</span>
+        <div><strong>Non sai da dove iniziare</strong><p>Cerchi una mappa chiara delle opportunità disponibili, ordinate per impatto, costo e tempo richiesto.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     CHI SIAMO
+══════════════════════════════════ -->
+<div class="fw chi-section" id="chi-siamo">
+  <div class="inn">
+    <div class="chi-grid">
+
+      <!-- Testo sinistra -->
+      <div class="chi-text">
+        <span class="sec-label">Chi Siamo</span>
+        <h2>Una guida pratica per chi <em style="color:var(--gilt);font-style:normal">parte da zero</em></h2>
+        <p>Curriculum Strategico nasce dall'esigenza concreta di studenti universitari che vogliono costruire un profilo professionale <strong style="color:#fff">prima ancora di laurearsi</strong>: senza esperienze pregresse, senza budget, spesso senza sapere da dove cominciare.</p>
+        <p>Ogni articolo è scritto per offrire metodi verificabili, dati aggiornati e percorsi replicabili — non consigli generici. Erasmus, certificazioni gratuite, hackathon, stage virtuali, volontariato: tutto ciò che vale davvero sul mercato del lavoro.</p>
+        <a href="https://www.curriculumstrategico.it/chi-siamo/" class="btn-ghost-light">Scopri di più su di noi →</a>
+      </div>
+
+      <!-- Statistiche destra -->
+      <div class="chi-visual">
+        <div class="chi-stat-card">
+          <span class="chi-num">6+</span>
+          <span class="chi-lbl">Guide operative</span>
+        </div>
+        <div class="chi-stat-card">
+          <span class="chi-num">100%</span>
+          <span class="chi-lbl">Contenuti gratuiti</span>
+        </div>
+        <div class="chi-stat-card">
+          <span class="chi-num">2026</span>
+          <span class="chi-lbl">Sempre aggiornato</span>
+        </div>
+        <div class="chi-stat-card">
+          <span class="chi-num">0€</span>
+          <span class="chi-lbl">Per iniziare</span>
+        </div>
+        <div class="chi-quote">
+          <span class="chi-quote-icon">💡</span>
+          <p>«Non serve aspettare il lavoro per costruire il CV. Serve sapere dove guardare — e come trasformare ogni esperienza in un asset misurabile.»</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     CONTATTACI
+══════════════════════════════════ -->
+<div class="fw contact-section" id="contattaci">
+  <div class="inn">
+    <span class="sec-label">Contattaci</span>
+    <h2 class="sec-title">Siamo qui per aiutarti</h2>
+    <p class="sec-sub">Hai domande su un articolo, vuoi segnalare un'opportunità o proporre una collaborazione? Scrivici — rispondiamo entro 48 ore.</p>
+
+    <div class="contact-grid">
+
+      <!-- Email -->
+      <div class="contact-card">
+        <div class="contact-icon mail">✉️</div>
+        <h3>Scrivici una email</h3>
+        <p>Per domande, collaborazioni o segnalazioni. Risposta garantita entro 48 ore.</p>
+        <a href="mailto:info@curriculumstrategico.it" class="contact-link">info@curriculumstrategico.it →</a>
+      </div>
+
+      <!-- Instagram -->
+      <div class="contact-card">
+        <div class="contact-icon ig">📸</div>
+        <h3>Seguici su Instagram</h3>
+        <p>Aggiornamenti, opportunità e tips quotidiani su CV, esperienze e mercato del lavoro.</p>
+        <a href="https://www.instagram.com/curriculum_strategico/" target="_blank" rel="noopener" class="contact-link">@curriculum_strategico →</a>
+      </div>
+
+      <!-- Newsletter card -->
+      <div class="contact-card">
+        <div class="contact-icon mail" style="background:rgba(245,158,11,.12)">📬</div>
+        <h3>Iscriviti alla Newsletter</h3>
+        <p>Una volta a settimana: bandi aperti, guide nuove e opportunità selezionate. Gratis, zero spam.</p>
+        <a href="https://www.curriculumstrategico.it/newsletter/" class="contact-link">Iscriviti gratis →</a>
+      </div>
+
+      <!-- Messaggio box -->
+      <div class="contact-form-hint">
+        <p>Hai <strong>feedback su un articolo</strong>, vuoi segnalare un bando o collaborare con noi? Scrivici via email oppure contattaci su Instagram — siamo sempre disponibili a scambiare idee con studenti e professionisti.</p>
+        <a href="mailto:info@curriculumstrategico.it" class="btn-gold" style="flex-shrink:0">✉ Scrivici ora</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     NEWSLETTER CTA
+══════════════════════════════════ -->
+<div class="fw nl-section">
+  <div class="inn">
+    <div class="nl-inner">
+      <div class="nl-copy">
+        <h2>Rimani aggiornato sulle migliori opportunità</h2>
+        <p>Bandi aperti, nuove certificazioni gratuite, guide pratiche e strategie CV — una volta a settimana, direttamente nella tua inbox.</p>
+      </div>
+      <div>
+        <a href="https://www.curriculumstrategico.it/newsletter/" class="btn-gold" style="font-size:16px;padding:15px 34px">✉ Iscriviti gratis</a>
+        <p class="nl-meta">Gratuita · Niente spam · Cancellazione in un click</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /cs2 -->
+
+<script src="script.js"></script>
+</body>
+</html>
